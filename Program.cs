@@ -52,7 +52,7 @@ class Program
                 break;
             case "2":
                 // Checking conditions for printing the triangle
-                if (width % 2 == 0 || width > 2 * height)
+                if ((width % 2 == 0) || (width > 2 * height))
                 {
                     Console.WriteLine("Unable to print the triangle");
                     return;
@@ -61,11 +61,12 @@ class Program
                 // The amount of odd numbers that are in the width minus the first and the last
                 int odd = width / 2 - 1;
                 //There is no odd number to fill the triangle in the middle
-                if (odd==0)
+                if (odd==0|| width == 1 && height > 2)
                 {
                     Console.WriteLine("Unable to print the triangle There is no odd number to fill the triangle in the middle");
                     return;
                 }
+
                 // Checking if the rows are divided evenly and keeping the remainder
                 int check = (height - 2) % odd;
                 {
